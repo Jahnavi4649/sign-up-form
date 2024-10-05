@@ -11,49 +11,61 @@
     <script src="main.js" defer></script>
 </head>
 <body>
-    <div id="side-bar">
-        <div class="logo-section">
-            <img src="assets\site-icon.svg" alt="site-icon" id="logo">
-            <div>Sylva</div>
+    <div id="signup-page" class="signup-page" >
+        <div id="side-bar">
+            <div class="logo-section">
+                <img src="assets\site-icon.svg" alt="site-icon" id="logo">
+                <div>Sylva</div>
+            </div>
+        </div>
+        <div id="form-section">
+            <div id="form-info">
+                <p>Sign Up <i>now</i> to join us on a journey to preserve wildlife.</p>
+            </div>
+            <div id="form-container">
+                <form action="" name="sign-up-form">
+                    <legend>Let's do this!</legend>
+                    <div class="form-items">
+                        <label for="first-name">FIRST NAME</label><br>
+                        <input type="text" id="first-name" name="first-name" value="">
+                    </div>
+                    <div class="form-items">
+                        <label for="last-name">LAST NAME</label><br>
+                        <input type="text" id="last-name" name="last-name" value="">
+                    </div>
+                    <div class="form-items">
+                        <label for="email">EMAIL</label><br>
+                        <input type="email" id="email" name="email" value="">
+                    </div>
+                    <div class="form-items">
+                        <label for="phone">PHONE NUMBER</label><br>
+                        <input type="text" id="phone" name="phone" maxlength="10" value="">
+                    </div>
+                    <div class="form-items">
+                        <label for="password">PASSWORD</label><br>
+                        <input type="text" id="password"  name="password" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    </div>
+                    <div class="form-items">
+                        <label for="confirm-password">CONFIRM PASSWORD</label><br>
+                        <input type="text" id="confirm-password" name="confirm-password" value="" >
+                    </div>
+                    <small id="message"></small>
+                </form>
+            </div>
+            <div id="form-action">
+                <button type="submit" id="create-btn" value="submit" onclick="validateForm()">Create Account</button>
+                <p>Already have an account? <span id="login-btn">Log In</span></p>
+            </div>
         </div>
     </div>
-    <div id="form-section">
-        <div id="form-info">
-            <p>Sign Up <i>now</i> to join us on a journey to preserve wildlife.</p>
+   <div id="success-page" class="hidden">
+        <div class="container-box">
+            <div class="logo">
+                <img src="assets\site-icon-black.svg" alt="site-icon" id="logo">
+                <div>Sylva</div>
+            </div>
+            <p>Account Created Successfully</p>
         </div>
-        <div id="form-container">
-            <form action="" name="sign-up-form">
-                <legend>Let's do this!</legend>
-                <div class="form-items">
-                    <label for="first-name">FIRST NAME</label><br>
-                    <input type="text" id="first-name" name="first-name" value="">
-                </div>
-                <div class="form-items">
-                    <label for="last-name">LAST NAME</label><br>
-                    <input type="text" id="last-name" name="last-name" value="">
-                </div>
-                <div class="form-items">
-                    <label for="email">EMAIL</label><br>
-                    <input type="email" id="email" name="email" value="">
-                </div>
-                <div class="form-items">
-                    <label for="phone">PHONE NUMBER</label><br>
-                    <input type="text" id="phone" name="phone" maxlength="10" value="">
-                </div>
-                <div class="form-items">
-                    <label for="password">PASSWORD</label><br>
-                    <input type="text" id="password"  name="password" value="">
-                </div>
-                <div class="form-items">
-                    <label for="confirm-password">CONFIRM PASSWORD</label><br>
-                    <input type="password" id="confirm-password" name="confirm-password" value="" >
-                </div>
-            </form>
-        </div>
-        <div id="form-action">
-            <button type="submit" id="create-btn" value="submit" onclick="validateForm()">Create Account</button>
-            <p>Already have an account? <span id="login-btn">Log In</span></p>
-        </div>
-    </div>
+   </div>
 </body>
 </html>
